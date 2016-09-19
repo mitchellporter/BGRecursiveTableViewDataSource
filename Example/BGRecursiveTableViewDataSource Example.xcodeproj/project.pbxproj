@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D1680A91D9026F400DF0144 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680A81D9026F400DF0144 /* main.m */; };
+		3D1680AC1D9026F400DF0144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680AB1D9026F400DF0144 /* AppDelegate.m */; };
+		3D1680B71D9026F400DF0144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D1680B61D9026F400DF0144 /* Assets.xcassets */; };
+		3D1680BA1D9026F400DF0144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1680B81D9026F400DF0144 /* LaunchScreen.storyboard */; };
+		3D1680D61D9029ED00DF0144 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680D51D9029ED00DF0144 /* ExampleTableViewController.m */; };
+		3D1680E31D902E0200DF0144 /* GroupedStyleExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680E21D902E0200DF0144 /* GroupedStyleExampleTableViewController.m */; };
+		3D1680E71D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680E61D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.m */; };
+		3D1680EA1D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680E91D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.m */; };
+		3D1680ED1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680EC1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.m */; };
+		3D1680F01D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680EF1D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.m */; };
+		3D1680F41D90322200DF0144 /* ExampleA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680F31D90322200DF0144 /* ExampleA.m */; };
+		3D1680F71D90322A00DF0144 /* ExampleB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680F61D90322A00DF0144 /* ExampleB.m */; };
+		3D1680FA1D90323100DF0144 /* ExampleC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680F91D90323100DF0144 /* ExampleC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D1680A41D9026F400DF0144 /* BGRecursiveTableViewDataSource Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BGRecursiveTableViewDataSource Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1680A81D9026F400DF0144 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D1680AA1D9026F400DF0144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D1680AB1D9026F400DF0144 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D1680B61D9026F400DF0144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D1680B91D9026F400DF0144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D1680BB1D9026F400DF0144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1680D41D9029ED00DF0144 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableViewController.h; sourceTree = "<group>"; };
+		3D1680D51D9029ED00DF0144 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableViewController.m; sourceTree = "<group>"; };
+		3D1680E11D902E0200DF0144 /* GroupedStyleExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupedStyleExampleTableViewController.h; sourceTree = "<group>"; };
+		3D1680E21D902E0200DF0144 /* GroupedStyleExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupedStyleExampleTableViewController.m; sourceTree = "<group>"; };
+		3D1680E51D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleSwitchToggleSectionGroup.h; sourceTree = "<group>"; };
+		3D1680E61D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSwitchToggleSectionGroup.m; sourceTree = "<group>"; };
+		3D1680E81D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleRedBackgroundSectionGroup.h; sourceTree = "<group>"; };
+		3D1680E91D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleRedBackgroundSectionGroup.m; sourceTree = "<group>"; };
+		3D1680EB1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleGreenBackgroundSectionGroup.h; sourceTree = "<group>"; };
+		3D1680EC1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleGreenBackgroundSectionGroup.m; sourceTree = "<group>"; };
+		3D1680EE1D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleBlueBackgroundSectionGroup.h; sourceTree = "<group>"; };
+		3D1680EF1D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleBlueBackgroundSectionGroup.m; sourceTree = "<group>"; };
+		3D1680F21D90322200DF0144 /* ExampleA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleA.h; sourceTree = "<group>"; };
+		3D1680F31D90322200DF0144 /* ExampleA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleA.m; sourceTree = "<group>"; };
+		3D1680F51D90322A00DF0144 /* ExampleB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleB.h; sourceTree = "<group>"; };
+		3D1680F61D90322A00DF0144 /* ExampleB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleB.m; sourceTree = "<group>"; };
+		3D1680F81D90323100DF0144 /* ExampleC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleC.h; sourceTree = "<group>"; };
+		3D1680F91D90323100DF0144 /* ExampleC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D1680A11D9026F400DF0144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D16809B1D9026F400DF0144 = {
+			isa = PBXGroup;
+			children = (
+				3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
+				3D1680A51D9026F400DF0144 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D1680A51D9026F400DF0144 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680A41D9026F400DF0144 /* BGRecursiveTableViewDataSource Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680A71D9026F400DF0144 /* Supporting Files */,
+				3D1680F11D9031E600DF0144 /* Table View Data Sources */,
+				3D1680C11D90289800DF0144 /* View Controllers */,
+				3D1680AA1D9026F400DF0144 /* AppDelegate.h */,
+				3D1680AB1D9026F400DF0144 /* AppDelegate.m */,
+				3D1680B61D9026F400DF0144 /* Assets.xcassets */,
+				3D1680BB1D9026F400DF0144 /* Info.plist */,
+				3D1680B81D9026F400DF0144 /* LaunchScreen.storyboard */,
+			);
+			path = "BGRecursiveTableViewDataSource Example";
+			sourceTree = "<group>";
+		};
+		3D1680A71D9026F400DF0144 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680A81D9026F400DF0144 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D1680C11D90289800DF0144 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680D41D9029ED00DF0144 /* ExampleTableViewController.h */,
+				3D1680D51D9029ED00DF0144 /* ExampleTableViewController.m */,
+				3D1680E11D902E0200DF0144 /* GroupedStyleExampleTableViewController.h */,
+				3D1680E21D902E0200DF0144 /* GroupedStyleExampleTableViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3D1680D71D902D9900DF0144 /* Top-Level */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680F21D90322200DF0144 /* ExampleA.h */,
+				3D1680F31D90322200DF0144 /* ExampleA.m */,
+				3D1680F51D90322A00DF0144 /* ExampleB.h */,
+				3D1680F61D90322A00DF0144 /* ExampleB.m */,
+				3D1680F81D90323100DF0144 /* ExampleC.h */,
+				3D1680F91D90323100DF0144 /* ExampleC.m */,
+			);
+			path = "Top-Level";
+			sourceTree = "<group>";
+		};
+		3D1680E41D902E8100DF0144 /* Section Groups */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680EE1D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.h */,
+				3D1680EF1D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.m */,
+				3D1680EB1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.h */,
+				3D1680EC1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.m */,
+				3D1680E81D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.h */,
+				3D1680E91D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.m */,
+				3D1680E51D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.h */,
+				3D1680E61D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.m */,
+			);
+			path = "Section Groups";
+			sourceTree = "<group>";
+		};
+		3D1680F11D9031E600DF0144 /* Table View Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3D1680E41D902E8100DF0144 /* Section Groups */,
+				3D1680D71D902D9900DF0144 /* Top-Level */,
+			);
+			path = "Table View Data Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D1680A31D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D1680BE1D9026F400DF0144 /* Build configuration list for PBXNativeTarget "BGRecursiveTableViewDataSource Example" */;
+			buildPhases = (
+				3D1680A01D9026F400DF0144 /* Sources */,
+				3D1680A11D9026F400DF0144 /* Frameworks */,
+				3D1680A21D9026F400DF0144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BGRecursiveTableViewDataSource Example";
+			productName = "BGRecursiveTableViewDataSource Example";
+			productReference = 3D1680A41D9026F400DF0144 /* BGRecursiveTableViewDataSource Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D16809C1D9026F400DF0144 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ben Guild";
+				TargetAttributes = {
+					3D1680A31D9026F400DF0144 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 3D16809F1D9026F400DF0144 /* Build configuration list for PBXProject "BGRecursiveTableViewDataSource Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D16809B1D9026F400DF0144;
+			productRefGroup = 3D1680A51D9026F400DF0144 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D1680A31D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D1680A21D9026F400DF0144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1680BA1D9026F400DF0144 /* LaunchScreen.storyboard in Resources */,
+				3D1680B71D9026F400DF0144 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D1680A01D9026F400DF0144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1680F41D90322200DF0144 /* ExampleA.m in Sources */,
+				3D1680F71D90322A00DF0144 /* ExampleB.m in Sources */,
+				3D1680FA1D90323100DF0144 /* ExampleC.m in Sources */,
+				3D1680AC1D9026F400DF0144 /* AppDelegate.m in Sources */,
+				3D1680E31D902E0200DF0144 /* GroupedStyleExampleTableViewController.m in Sources */,
+				3D1680D61D9029ED00DF0144 /* ExampleTableViewController.m in Sources */,
+				3D1680A91D9026F400DF0144 /* main.m in Sources */,
+				3D1680E71D902EA000DF0144 /* ExampleSwitchToggleSectionGroup.m in Sources */,
+				3D1680EA1D902EB500DF0144 /* ExampleRedBackgroundSectionGroup.m in Sources */,
+				3D1680ED1D902EC900DF0144 /* ExampleGreenBackgroundSectionGroup.m in Sources */,
+				3D1680F01D902ED600DF0144 /* ExampleBlueBackgroundSectionGroup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D1680B81D9026F400DF0144 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D1680B91D9026F400DF0144 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D1680BC1D9026F400DF0144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D1680BD1D9026F400DF0144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D1680BF1D9026F400DF0144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D1680C01D9026F400DF0144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D16809F1D9026F400DF0144 /* Build configuration list for PBXProject "BGRecursiveTableViewDataSource Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1680BC1D9026F400DF0144 /* Debug */,
+				3D1680BD1D9026F400DF0144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D1680BE1D9026F400DF0144 /* Build configuration list for PBXNativeTarget "BGRecursiveTableViewDataSource Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D1680BF1D9026F400DF0144 /* Debug */,
+				3D1680C01D9026F400DF0144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D16809C1D9026F400DF0144 /* Project object */;
+}
