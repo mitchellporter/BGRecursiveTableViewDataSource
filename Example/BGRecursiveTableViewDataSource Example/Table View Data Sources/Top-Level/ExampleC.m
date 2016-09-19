@@ -9,6 +9,7 @@
 #import "ExampleC.h"
 ////
 
+#import "AddNewDynamicExampleSectionGroup.h"
 #import "SwitchToggledExampleSectionGroup.h"
 
 #import "RedExampleSectionGroup.h"
@@ -16,10 +17,11 @@
 #import "BlueExampleSectionGroup.h"
 
 
-#define tableView_sectionGroup_red 0
-#define tableView_sectionGroup_switchTopLevel 1
-#define tableView_sectionGroup_blue 2
-#define tableView_sectionGroupCount 3
+#define tableView_sectionGroup_addNewDynamic 0
+#define tableView_sectionGroup_red 1
+#define tableView_sectionGroup_switchTopLevel 2
+#define tableView_sectionGroup_blue 3
+#define tableView_sectionGroupCount 4
 
 
 @implementation ExampleC
@@ -32,7 +34,12 @@
         {
             BGRecursiveTableViewDataSourceSectionGroup *sectionGroupDataSource;
             
-            if (sectionGroupIndex==tableView_sectionGroup_red)
+            if (sectionGroupIndex==tableView_sectionGroup_addNewDynamic)
+            {
+                sectionGroupDataSource=[[AddNewDynamicExampleSectionGroup alloc] initWithTableView:[self tableView]];
+                
+            }
+            else if (sectionGroupIndex==tableView_sectionGroup_red)
             {
                 sectionGroupDataSource=[[RedExampleSectionGroup alloc] initWithTableView:[self tableView]];
                 ////

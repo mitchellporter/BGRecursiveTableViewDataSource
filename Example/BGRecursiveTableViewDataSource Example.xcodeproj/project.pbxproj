@@ -23,6 +23,7 @@
 		3D16810F1D90396900DF0144 /* YellowExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */; };
 		3D1681191D90434300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681161D90434300DF0144 /* BGRecursiveTableViewDataSource.m */; };
 		3D16811A1D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */; };
+		3D16811D1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16811C1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		3D1681161D90434300DF0144 /* BGRecursiveTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSource.m; path = ../../BGRecursiveTableViewDataSource.m; sourceTree = "<group>"; };
 		3D1681171D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGRecursiveTableViewDataSourceSectionGroup.h; path = ../../BGRecursiveTableViewDataSourceSectionGroup.h; sourceTree = "<group>"; };
 		3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSourceSectionGroup.m; path = ../../BGRecursiveTableViewDataSourceSectionGroup.m; sourceTree = "<group>"; };
+		3D16811B1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewDynamicExampleSectionGroup.h; sourceTree = "<group>"; };
+		3D16811C1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewDynamicExampleSectionGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
+				3D1681141D90433500DF0144 /* BGRecursiveTableViewDataSource */,
 				3D1680A51D9026F400DF0144 /* Products */,
 				3D1680A71D9026F400DF0144 /* Supporting Files */,
 			);
@@ -90,7 +94,6 @@
 		3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */ = {
 			isa = PBXGroup;
 			children = (
-				3D1681141D90433500DF0144 /* BGRecursiveTableViewDataSource */,
 				3D1680F11D9031E600DF0144 /* Table View Data Sources */,
 				3D1680C11D90289800DF0144 /* View Controllers */,
 				3D1680AA1D9026F400DF0144 /* AppDelegate.h */,
@@ -137,6 +140,8 @@
 		3D1680E41D902E8100DF0144 /* Section Groups */ = {
 			isa = PBXGroup;
 			children = (
+				3D16811B1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.h */,
+				3D16811C1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m */,
 				3D1680EE1D902ED600DF0144 /* BlueExampleSectionGroup.h */,
 				3D1680EF1D902ED600DF0144 /* BlueExampleSectionGroup.m */,
 				3D1680EB1D902EC900DF0144 /* GreenExampleSectionGroup.h */,
@@ -169,6 +174,7 @@
 				3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */,
 			);
 			name = BGRecursiveTableViewDataSource;
+			path = "BGRecursiveTableViewDataSource Example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +258,7 @@
 				3D1680A91D9026F400DF0144 /* main.m in Sources */,
 				3D1680E71D902EA000DF0144 /* SwitchToggledExampleSectionGroup.m in Sources */,
 				3D1680EA1D902EB500DF0144 /* RedExampleSectionGroup.m in Sources */,
+				3D16811D1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m in Sources */,
 				3D1680ED1D902EC900DF0144 /* GreenExampleSectionGroup.m in Sources */,
 				3D16811A1D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */,
 				3D1680F01D902ED600DF0144 /* BlueExampleSectionGroup.m in Sources */,
