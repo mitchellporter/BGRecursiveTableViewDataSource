@@ -1,5 +1,5 @@
 # BGRecursiveTableViewDataSource
-Recursive “stacking” and modularization of `UITableViewDataSource(s)` in Apple iOS's `UIKit`
+Recursive “stacking” and modularization of `UITableViewDataSource(s)` with Apple iOS's `UIKit`
 
 **Documentation and demo are a work in process,** but Cocoa Pod is stable.
 
@@ -9,7 +9,7 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)` in App
 
 ## Overview
 
-**This module allows you to stack multiple `UITableViewDataSource(s)` in a single `UITableViewController`, and manage them dynamically.** [Core Data](https://en.wikipedia.org/wiki/Core_Data) and [NSFetchedResultsController](https://developer.apple.com/reference/coredata/nsfetchedresultscontroller) are supported.
+**This module allows you to stack multiple `UITableViewDataSource(s)` in a single `UITableViewController` or `UITableView`, and manage them dynamically.** [Core Data](https://en.wikipedia.org/wiki/Core_Data) and [NSFetchedResultsController](https://developer.apple.com/reference/coredata/nsfetchedresultscontroller) are supported.
 
 `UITableViewDataSource(s)` for more complicated views (consider **the "Settings" app on iOS**, for example) can be complex and difficult to maintain. Displaying multiple sections with varying and often dynamic content is necessary, yet so is avoiding "spaghetti code" that requires dissection and complex testing for changes.
 
