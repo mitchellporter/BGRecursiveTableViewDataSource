@@ -55,7 +55,7 @@ An additional subclass variant besides the standard one for using `NSFetchedResu
 
 ## Debugging Tips
 
-If you run into a crash or exception, try disabling one or more of your section groups or their subsections.
+If you run into a crash or exception, try disabling one or more of your section groups and/or their subsections to pinpoint the cause.
 
 ## Installation
 
