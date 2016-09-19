@@ -9,11 +9,11 @@ One strategy for managing varying sections of content that are both static and d
 
 It also includes native support for **`NSFetchedResultsController`** via an optional subclass.
 
-## Introducing “Subsections”
+## Introducing Toggleable, Recursive “Subsections”
 
 The simplest application of `BGRecursiveTableViewDataSource` is without any recursion or "subsections". However, if you want toggleable or dynamic subsections that appear or disappear with the touch of a switch (for example), you may find the subsection functionality to be useful.
 
-Subsections allow you to “pin” a `BGRecursiveTableViewDataSourceSectionGroup` (`UITableViewDataSource` subclass) to an `NSIndexPath` within another `BGRecursiveTableViewDataSourceSectionGroup`, recursively. You may have it appear/disappear with a method call at any level in your top-level `BGRecursiveTableViewDataSource`, and its initial state of being expanded or hidden is configurable.
+Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** (`UITableViewDataSource` subclass) to an `NSIndexPath` within another `BGRecursiveTableViewDataSourceSectionGroup`, recursively. You may have it appear/disappear with a method call at any level in your top-level `BGRecursiveTableViewDataSource`, and its initial state of being expanded or hidden is configurable.
 
 ------------------------------------------------------------------
 
