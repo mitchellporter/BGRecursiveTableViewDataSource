@@ -11,7 +11,7 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)`
 
 ![Imagine trying to maintain `UITableViewDataSource(s)` like this!](https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/demo.png "Imagine trying to maintain `UITableViewDataSource(s)` like this!")
 
-**... Imagine trying to maintain complex/dynamic `UITableViewDataSource(s)` like this one!**
+> **... Imagine trying to maintain complex/dynamic `UITableViewDataSource(s)` like this one!**
 
 One strategy for managing varying sections of content that are both static and dynamic is by using `BGRecursiveTableViewDataSource`. This library allows you to build **modular, subclassable `UITableViewDataSource(s)` and group them together dynamically** for use with `UITableViewController(s)` easily.
 
@@ -22,6 +22,14 @@ It also includes native support for **`NSFetchedResultsController`** via an opti
 The simplest application of `BGRecursiveTableViewDataSource` is without any recursion or "subsections". However, if you want toggleable or dynamic subsections that appear or disappear with the touch of a switch (for example), you may find the subsection functionality to be useful.
 
 Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** (`UITableViewDataSource` subclass) to an `NSIndexPath` within another `BGRecursiveTableViewDataSourceSectionGroup`, recursively. You may have it appear/disappear with a method call at any level in your top-level `BGRecursiveTableViewDataSource`, and its initial state of being expanded or hidden is configurable.
+
+## Core Data & `NSFetchedResultsController`
+
+If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), you probably already know what you’re doing. Support for this is built-in using a provided subclass. Check out the “Example” project bundled with this pod/repo, and imagine subclassing and initializing **`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** instead with a `NSFetchedResultsController` as a property.
+
+There are some **additional methods available** for this subclass, so check out its header file.
+
+Last, **an additional subclass variant** besides the standard one for `NSFetchedResultsController` is available: `BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup` — This subclass will create **empty sections** based on the `NSFetchedResultsController` content. You can fill these with static or other content as you wish.
 
 ------------------------------------------------------------------
 
