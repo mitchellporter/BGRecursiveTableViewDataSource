@@ -1,5 +1,5 @@
 # BGRecursiveTableViewDataSource
-Recursive “stacking” and modularization of `UITableViewDataSource(s)`
+Recursive “stacking” and modularization of `UITableViewDataSource(s)` in Apple iOS's `UIKit`
 
 **Documentation and demo are a work in process,** but Cocoa Pod is stable.
 
