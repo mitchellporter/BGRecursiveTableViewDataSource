@@ -9,8 +9,6 @@
 #import "ExampleA.h"
 ////
 
-#import "BGRecursiveTableViewDataSourceSectionGroup.h"
-
 #import "RedExampleSectionGroup.h"
 #import "GreenExampleSectionGroup.h"
 #import "BlueExampleSectionGroup.h"

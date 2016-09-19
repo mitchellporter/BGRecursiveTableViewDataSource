@@ -40,19 +40,22 @@
 {
     id optionalReturnValue=[_internalStrongDataSource resolveSectionGroupAndInnerIndexPathForTopLevelIndexPath:indexPath matchBlock:^id(BGRecursiveTableViewDataSourceSectionGroup *sectionGroup, NSIndexPath *innerIndexPath)
     {
-        UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"Row Tapped!" message:[NSString stringWithFormat:@"You tapped the row at %@ in the section group \"%@\". Its top-level index path is: %@", innerIndexPath, sectionGroup, indexPath] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"Row Tapped!" message:[NSString stringWithFormat:@"You tapped the row #%ld in section #%ld of the section group \"%@\".\n\nIts top-level index path is row #%ld in section #%ld.", [innerIndexPath row], [innerIndexPath section], sectionGroup, [indexPath row], [indexPath section]] preferredStyle:UIAlertControllerStyleAlert];
         
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
         
         [self presentViewController:alertController animated:YES completion:nil];
         ////
         
-        return @"Hello world!"; // NOTE: It's possible to pass a return-value through this matching block!
+        return @"Hello World!"; // NOTE: It's possible to pass a return-value through this matching block!
         
     } ];
     ////
     
     NSLog(@"Optional return value passed-through? \"%@\"", optionalReturnValue);
+    ////
+    
+    [[self tableView] deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 

@@ -24,6 +24,8 @@
 		3D1681071D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681011D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m */; };
 		3D1681081D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681031D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m */; };
 		3D1681091D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681051D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */; };
+		3D16810C1D9035E600DF0144 /* ExampleD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16810B1D9035E600DF0144 /* ExampleD.m */; };
+		3D16810F1D90396900DF0144 /* YellowExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,10 @@
 		3D1681031D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m; sourceTree = "<group>"; };
 		3D1681041D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGRecursiveTableViewDataSourceSectionGroup.h; path = ../../BGRecursiveTableViewDataSourceSectionGroup.h; sourceTree = "<group>"; };
 		3D1681051D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSourceSectionGroup.m; path = ../../BGRecursiveTableViewDataSourceSectionGroup.m; sourceTree = "<group>"; };
+		3D16810A1D9035E600DF0144 /* ExampleD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleD.h; sourceTree = "<group>"; };
+		3D16810B1D9035E600DF0144 /* ExampleD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleD.m; sourceTree = "<group>"; };
+		3D16810D1D90396900DF0144 /* YellowExampleSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowExampleSectionGroup.h; sourceTree = "<group>"; };
+		3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowExampleSectionGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,8 @@
 				3D1680F61D90322A00DF0144 /* ExampleB.m */,
 				3D1680F81D90323100DF0144 /* ExampleC.h */,
 				3D1680F91D90323100DF0144 /* ExampleC.m */,
+				3D16810A1D9035E600DF0144 /* ExampleD.h */,
+				3D16810B1D9035E600DF0144 /* ExampleD.m */,
 			);
 			path = "Top-Level";
 			sourceTree = "<group>";
@@ -148,6 +156,8 @@
 				3D1680E91D902EB500DF0144 /* RedExampleSectionGroup.m */,
 				3D1680E51D902EA000DF0144 /* SwitchToggledExampleSectionGroup.h */,
 				3D1680E61D902EA000DF0144 /* SwitchToggledExampleSectionGroup.m */,
+				3D16810D1D90396900DF0144 /* YellowExampleSectionGroup.h */,
+				3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */,
 			);
 			path = "Section Groups";
 			sourceTree = "<group>";
@@ -267,10 +277,12 @@
 				3D1680FA1D90323100DF0144 /* ExampleC.m in Sources */,
 				3D1680AC1D9026F400DF0144 /* AppDelegate.m in Sources */,
 				3D1681061D9032C300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */,
+				3D16810C1D9035E600DF0144 /* ExampleD.m in Sources */,
 				3D1680E31D902E0200DF0144 /* GroupedStyleExampleTableViewController.m in Sources */,
 				3D1681071D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m in Sources */,
 				3D1681091D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */,
 				3D1680D61D9029ED00DF0144 /* ExampleTableViewController.m in Sources */,
+				3D16810F1D90396900DF0144 /* YellowExampleSectionGroup.m in Sources */,
 				3D1680A91D9026F400DF0144 /* main.m in Sources */,
 				3D1680E71D902EA000DF0144 /* SwitchToggledExampleSectionGroup.m in Sources */,
 				3D1680EA1D902EB500DF0144 /* RedExampleSectionGroup.m in Sources */,

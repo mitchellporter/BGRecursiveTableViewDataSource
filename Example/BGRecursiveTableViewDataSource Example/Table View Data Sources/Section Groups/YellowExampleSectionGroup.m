@@ -1,26 +1,24 @@
 //
-//  RedExampleSectionGroup.m
+//  YellowExampleSectionGroup.m
 //  BGRecursiveTableViewDataSource Example
 //
-//  Created by Ben Guild on 2016/09/19.
+//  Created by Ben Guild on 2016/09/20.
 //  Copyright © 2016年 Ben Guild. All rights reserved.
 //
 
-#import "RedExampleSectionGroup.h"
+#import "YellowExampleSectionGroup.h"
+////
 
-@implementation RedExampleSectionGroup
+#import "BlueExampleSectionGroup.h"
+
+
+@implementation YellowExampleSectionGroup
 
 #pragma mark <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [super numberOfSectionsInTableView:tableView]+2;
-    
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return [NSString stringWithFormat:@"Red Section #%ld", section+1];
+    return [super numberOfSectionsInTableView:tableView]+1;
     
 }
 
@@ -40,8 +38,8 @@
         
     }
     
-    [[cell textLabel] setText:NSStringFromClass([self class])];
-    [cell setBackgroundColor:[UIColor redColor]];
+    [[cell textLabel] setText:([[self parentSectionGroup] isKindOfClass:[BlueExampleSectionGroup class]]  ? @"... Without modifying parent!" : @"Subsection at `indexPath`!") /* NSStringFromClass([self class]) */];
+    [cell setBackgroundColor:[UIColor yellowColor]];
     
     return cell;
     

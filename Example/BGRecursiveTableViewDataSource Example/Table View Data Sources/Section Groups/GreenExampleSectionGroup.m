@@ -14,7 +14,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return [super numberOfSectionsInTableView:tableView]+5;
     
 }
 
@@ -26,7 +26,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [super tableView:tableView numberOfRowsInSection:section]+2;
     
 }
 
