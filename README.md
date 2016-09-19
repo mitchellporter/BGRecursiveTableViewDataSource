@@ -11,6 +11,8 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)`
 
 ![Imagine trying to maintain `UITableViewDataSource(s)` like this!](https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/demo.png "Imagine trying to maintain `UITableViewDataSource(s)` like this!")
 
+**... Imagine trying to maintain complex/dynamic `UITableViewDataSource(s)` like this one!**
+
 One strategy for managing varying sections of content that are both static and dynamic is by using `BGRecursiveTableViewDataSource`. This library allows you to build **modular, subclassable `UITableViewDataSource(s)` and group them together dynamically** for use with `UITableViewController(s)` easily.
 
 It also includes native support for **`NSFetchedResultsController`** via an optional subclass.
