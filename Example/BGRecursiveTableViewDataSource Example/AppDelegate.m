@@ -30,7 +30,7 @@
         BOOL theFlip=!([viewControllers count] % 2);
         ////
         
-        ExampleTableViewController *exampleTableViewController=[(theFlip ? [ExampleTableViewController class] : [GroupedStyleExampleTableViewController class]) new];
+        ExampleTableViewController *exampleTableViewController=[(!theFlip ? [ExampleTableViewController class] : [GroupedStyleExampleTableViewController class]) new];
         
         [exampleTableViewController setTitle:[NSString stringWithFormat:@"Example %@", label]];
         [exampleTableViewController setTabBarItem:[[UITabBarItem alloc] initWithTitle:[exampleTableViewController title] image:[UIImage imageNamed:(theFlip ? @"first" : @"second")] tag:0]];
@@ -44,7 +44,6 @@
     createExampleTableViewController([ExampleA class], @"A");
     createExampleTableViewController([ExampleB class], @"B");
     createExampleTableViewController([ExampleC class], @"C");
-    createExampleTableViewController([ExampleC class], @"D");
     ////
     
     UITabBarController *tabBarController=[UITabBarController new];

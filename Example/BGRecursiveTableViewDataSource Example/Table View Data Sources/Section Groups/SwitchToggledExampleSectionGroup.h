@@ -10,4 +10,9 @@
 
 @interface SwitchToggledExampleSectionGroup : BGRecursiveTableViewDataSourceSectionGroup
 
+@property (readonly, strong, nonatomic) BGRecursiveTableViewDataSourceSectionGroup *innerSectionGroup;
+
+- (instancetype)initWithTableView:(UITableView *)tableView innerSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)innerSectionGroup isInitiallyActive:(BOOL)isInitiallyActive;
+
+
 @end
