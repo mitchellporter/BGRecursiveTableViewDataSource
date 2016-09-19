@@ -49,7 +49,7 @@ If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), 
 
 There are some **additional methods available** for this subclass, so check out its header file.
 
-### Displaying empty sections with Core Data
+### Using Core Data to generating empty sections
 
 An additional subclass variant besides the standard one for using `NSFetchedResultsController` is also available: `BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup` — This subclass will create **empty sections** based on the `NSFetchedResultsController` content. You can fill these with static or other content as you wish.
 
