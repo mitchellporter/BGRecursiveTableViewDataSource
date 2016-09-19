@@ -1,5 +1,9 @@
 # BGRecursiveTableViewDataSource
-Recursive “stacking” and modularizing of `UITableViewDataSource(s)`
+Recursive “stacking” and modularization of `UITableViewDataSource(s)`
+
+[![Version](https://img.shields.io/cocoapods/v/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
+[![License](https://img.shields.io/cocoapods/l/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
+[![Platform](https://img.shields.io/cocoapods/p/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
 
 ## Overview
 
@@ -18,3 +22,21 @@ Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGro
 ------------------------------------------------------------------
 
 *More to come...*
+
+
+## Installation
+
+`BGRecursiveTableViewDataSource` is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "BGRecursiveTableViewDataSource"
+```
+
+## Author
+
+Ben Guild, email@benguild.com
+
+## License
+
+`BGRecursiveTableViewDataSource` is available under the MIT license. See the LICENSE file for more info.
