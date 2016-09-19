@@ -20,11 +20,9 @@
 		3D1680F41D90322200DF0144 /* ExampleA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680F31D90322200DF0144 /* ExampleA.m */; };
 		3D1680F71D90322A00DF0144 /* ExampleB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680F61D90322A00DF0144 /* ExampleB.m */; };
 		3D1680FA1D90323100DF0144 /* ExampleC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680F91D90323100DF0144 /* ExampleC.m */; };
-		3D1681061D9032C300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680FD1D9032C300DF0144 /* BGRecursiveTableViewDataSource.m */; };
-		3D1681071D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681011D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m */; };
-		3D1681081D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681031D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m */; };
-		3D1681091D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681051D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */; };
 		3D16810F1D90396900DF0144 /* YellowExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */; };
+		3D1681191D90434300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681161D90434300DF0144 /* BGRecursiveTableViewDataSource.m */; };
+		3D16811A1D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,16 +51,12 @@
 		3D1680F61D90322A00DF0144 /* ExampleB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleB.m; sourceTree = "<group>"; };
 		3D1680F81D90323100DF0144 /* ExampleC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleC.h; sourceTree = "<group>"; };
 		3D1680F91D90323100DF0144 /* ExampleC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleC.m; sourceTree = "<group>"; };
-		3D1680FC1D9032C300DF0144 /* BGRecursiveTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGRecursiveTableViewDataSource.h; path = ../../BGRecursiveTableViewDataSource.h; sourceTree = "<group>"; };
-		3D1680FD1D9032C300DF0144 /* BGRecursiveTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSource.m; path = ../../BGRecursiveTableViewDataSource.m; sourceTree = "<group>"; };
-		3D1681001D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.h; sourceTree = "<group>"; };
-		3D1681011D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m; sourceTree = "<group>"; };
-		3D1681021D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.h; sourceTree = "<group>"; };
-		3D1681031D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m; sourceTree = "<group>"; };
-		3D1681041D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGRecursiveTableViewDataSourceSectionGroup.h; path = ../../BGRecursiveTableViewDataSourceSectionGroup.h; sourceTree = "<group>"; };
-		3D1681051D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSourceSectionGroup.m; path = ../../BGRecursiveTableViewDataSourceSectionGroup.m; sourceTree = "<group>"; };
 		3D16810D1D90396900DF0144 /* YellowExampleSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowExampleSectionGroup.h; sourceTree = "<group>"; };
 		3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowExampleSectionGroup.m; sourceTree = "<group>"; };
+		3D1681151D90434300DF0144 /* BGRecursiveTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGRecursiveTableViewDataSource.h; path = ../../BGRecursiveTableViewDataSource.h; sourceTree = "<group>"; };
+		3D1681161D90434300DF0144 /* BGRecursiveTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSource.m; path = ../../BGRecursiveTableViewDataSource.m; sourceTree = "<group>"; };
+		3D1681171D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGRecursiveTableViewDataSourceSectionGroup.h; path = ../../BGRecursiveTableViewDataSourceSectionGroup.h; sourceTree = "<group>"; };
+		3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSourceSectionGroup.m; path = ../../BGRecursiveTableViewDataSourceSectionGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +73,6 @@
 		3D16809B1D9026F400DF0144 = {
 			isa = PBXGroup;
 			children = (
-				3D1680FB1D9032BB00DF0144 /* BGRecursiveTableViewDataSource */,
 				3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
 				3D1680A51D9026F400DF0144 /* Products */,
 				3D1680A71D9026F400DF0144 /* Supporting Files */,
@@ -97,6 +90,7 @@
 		3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */ = {
 			isa = PBXGroup;
 			children = (
+				3D1681141D90433500DF0144 /* BGRecursiveTableViewDataSource */,
 				3D1680F11D9031E600DF0144 /* Table View Data Sources */,
 				3D1680C11D90289800DF0144 /* View Controllers */,
 				3D1680AA1D9026F400DF0144 /* AppDelegate.h */,
@@ -166,35 +160,15 @@
 			path = "Table View Data Sources";
 			sourceTree = "<group>";
 		};
-		3D1680FB1D9032BB00DF0144 /* BGRecursiveTableViewDataSource */ = {
+		3D1681141D90433500DF0144 /* BGRecursiveTableViewDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				3D1680FE1D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup */,
-				3D1680FC1D9032C300DF0144 /* BGRecursiveTableViewDataSource.h */,
-				3D1680FD1D9032C300DF0144 /* BGRecursiveTableViewDataSource.m */,
-				3D1681041D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */,
-				3D1681051D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */,
+				3D1681151D90434300DF0144 /* BGRecursiveTableViewDataSource.h */,
+				3D1681161D90434300DF0144 /* BGRecursiveTableViewDataSource.m */,
+				3D1681171D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */,
+				3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */,
 			);
-			path = BGRecursiveTableViewDataSource;
-			sourceTree = "<group>";
-		};
-		3D1680FE1D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup */ = {
-			isa = PBXGroup;
-			children = (
-				3D1680FF1D9032C300DF0144 /* BGRecursiveTableViewDataSourceFetchedResultsSectionGroup */,
-				3D1681021D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.h */,
-				3D1681031D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m */,
-			);
-			path = BGRecursiveTableViewDataSourceSectionGroup;
-			sourceTree = "<group>";
-		};
-		3D1680FF1D9032C300DF0144 /* BGRecursiveTableViewDataSourceFetchedResultsSectionGroup */ = {
-			isa = PBXGroup;
-			children = (
-				3D1681001D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.h */,
-				3D1681011D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m */,
-			);
-			path = BGRecursiveTableViewDataSourceFetchedResultsSectionGroup;
+			name = BGRecursiveTableViewDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,20 +242,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1680F41D90322200DF0144 /* ExampleA.m in Sources */,
+				3D1681191D90434300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */,
 				3D1680F71D90322A00DF0144 /* ExampleB.m in Sources */,
 				3D1680FA1D90323100DF0144 /* ExampleC.m in Sources */,
 				3D1680AC1D9026F400DF0144 /* AppDelegate.m in Sources */,
-				3D1681061D9032C300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */,
 				3D1680E31D902E0200DF0144 /* GroupedStyleExampleTableViewController.m in Sources */,
-				3D1681071D9032C300DF0144 /* ../../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.m in Sources */,
-				3D1681091D9032C300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */,
 				3D1680D61D9029ED00DF0144 /* ExampleTableViewController.m in Sources */,
 				3D16810F1D90396900DF0144 /* YellowExampleSectionGroup.m in Sources */,
 				3D1680A91D9026F400DF0144 /* main.m in Sources */,
 				3D1680E71D902EA000DF0144 /* SwitchToggledExampleSectionGroup.m in Sources */,
 				3D1680EA1D902EB500DF0144 /* RedExampleSectionGroup.m in Sources */,
-				3D1681081D9032C300DF0144 /* ../../../BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.m in Sources */,
 				3D1680ED1D902EC900DF0144 /* GreenExampleSectionGroup.m in Sources */,
+				3D16811A1D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */,
 				3D1680F01D902ED600DF0144 /* BlueExampleSectionGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
