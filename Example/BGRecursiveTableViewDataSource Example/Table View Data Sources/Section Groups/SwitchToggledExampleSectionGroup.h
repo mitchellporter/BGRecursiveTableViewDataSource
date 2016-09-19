@@ -1,5 +1,5 @@
 //
-//  ExampleBlueBackgroundSectionGroup.h
+//  SwitchToggledExampleSectionGroup.h
 //  BGRecursiveTableViewDataSource Example
 //
 //  Created by Ben Guild on 2016/09/19.
@@ -8,6 +8,6 @@
 
 #import "BGRecursiveTableViewDataSourceSectionGroup.h"
 
-@interface ExampleBlueBackgroundSectionGroup : BGRecursiveTableViewDataSourceSectionGroup
+@interface SwitchToggledExampleSectionGroup : BGRecursiveTableViewDataSourceSectionGroup
 
 @end

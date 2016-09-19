@@ -1,38 +1,32 @@
 //
-//  ExampleBlueBackgroundSectionGroup.m
+//  GreenExampleSectionGroup.m
 //  BGRecursiveTableViewDataSource Example
 //
 //  Created by Ben Guild on 2016/09/19.
 //  Copyright © 2016年 Ben Guild. All rights reserved.
 //
 
-#import "ExampleBlueBackgroundSectionGroup.h"
+#import "GreenExampleSectionGroup.h"
 
-@implementation ExampleBlueBackgroundSectionGroup
+@implementation GreenExampleSectionGroup
 
 #pragma mark <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return arc4random_uniform(5);
+    return 5;
     
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [NSString stringWithFormat:@"Blue Section Header #%ld", section];
+    return [NSString stringWithFormat:@"Green Section #%ld", section+1];
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return arc4random_uniform(5);
-    
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
-{
-    return [NSString stringWithFormat:@"Blue Section Footer #%ld", section];
+    return 2;
     
 }
 
@@ -47,7 +41,7 @@
     }
     
     [[cell textLabel] setText:NSStringFromClass([self class])];
-    [cell setBackgroundColor:[UIColor cyanColor]];
+    [cell setBackgroundColor:[UIColor greenColor]];
     
     return cell;
     

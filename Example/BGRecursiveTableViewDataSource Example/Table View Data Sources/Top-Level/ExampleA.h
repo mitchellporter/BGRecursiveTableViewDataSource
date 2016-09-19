@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Ben Guild. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BGRecursiveTableViewDataSource.h"
 
 @interface ExampleA : BGRecursiveTableViewDataSource
 

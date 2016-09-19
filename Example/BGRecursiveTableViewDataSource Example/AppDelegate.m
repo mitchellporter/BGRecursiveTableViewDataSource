@@ -14,9 +14,9 @@
 #import "ExampleTableViewController.h"
 #import "GroupedStyleExampleTableViewController.h"
 
-#import "ExampleOne.h"
-#import "ExampleTwo.h"
-#import "ExampleThree.h"
+#import "ExampleA.h"
+#import "ExampleB.h"
+#import "ExampleC.h"
 
 
 @implementation AppDelegate
@@ -41,9 +41,9 @@
         
     };
     
-    createExampleTableViewController([ExampleOne class]);
-    createExampleTableViewController([ExampleTwo class]);
-    createExampleTableViewController([ExampleThree class]);
+    createExampleTableViewController([ExampleA class]);
+    createExampleTableViewController([ExampleB class]);
+    createExampleTableViewController([ExampleC class]);
     ////
     
     UITabBarController *tabBarController=[UITabBarController new];
