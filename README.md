@@ -9,7 +9,7 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)` with A
 
 ## Objective
 
-To provide a lightweight module for the vertical stacking and dynamic toggling of existing, modular `UITableViewDataSource(s)` for a `UITableView` and `UITableViewController`, while making as few (if any) changes to `UITableViewDataSource` as possible.
+To provide a lightweight module for the vertical stacking and dynamic toggling of existing, modular **`UITableViewDataSource` implementations** for a `UITableView` and `UITableViewController`, while making as few (if any) changes to `UITableViewDataSource` as possible.
 
 ## Implementation
 
@@ -31,7 +31,7 @@ Part of the simplicity of this implentation comes from the reuse of `UITableView
 - (NSIndexPath *)translateInternalIndexPathToTopLevel:(NSIndexPath *)indexPath;
 ```
 
-Convenience methods for inserting, reloading, or deleting rows and sections dynamically (and also beginning/ending updates on the `BGRecursiveTableViewDataSourceSectionGroup(s)` themselves) are provided simply by calling said methods on the data-sources rather than on the `UITableView` directly:
+Convenience methods for inserting, reloading, or deleting rows and sections dynamically (and also beginning/ending updates on the `BGRecursiveTableViewDataSourceSectionGroup(s)` themselves) are provided simply by **calling said methods on the `BGRecursiveTableViewDataSourceSectionGroup(s)`** rather than on the `UITableView` directly:
 
 ```objc
 - (void)beginUpdatesForSectionGroups:(NSSet <BGRecursiveTableViewDataSourceSectionGroup *>*)priorSectionGroups; // Use these internally instead of calling `UITableView` beginUpdates/endUpdates() methods.
@@ -77,10 +77,20 @@ As with the standard, single-level basic implementation of `BGRecursiveTableView
 
 Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** to an `NSIndexPath` in another section or subsection, and insert or hide all rows dynamically at run-time. Its initial state of being expanded or hidden is configurable.
 
-You can recursively resolve (from the top-level) which subsection an `NSIndexPath` belongs to by calling a method on the `BGRecursiveTableViewDataSource`:
+### Usage
+
+To set another `BGRecursiveTableViewDataSourceSectionGroup` to appear at an `NSIndexPath` **within another `BGRecursiveTableViewDataSourceSectionGroup`**, call this method:
 
 ```objc
-- (id)resolveSectionGroupAndInnerIndexPathForTopLevelIndexPath:(NSIndexPath *)indexPath matchBlock:(id (^)(BGRecursiveTableViewDataSourceSectionGroup *sectionGroup, NSIndexPath *innerIndexPath))matchBlock;
+- (void)setInnerSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)innerSectionGroup forRowAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isInitiallyActive:(BOOL)active;
+```
+
+If your `UITableView` has NOT loaded its data yet, setting "isInitiallyActive" to `true` will cause its content to appear immediately within its parent section at the `NSIndexPath` configured. 👍🏻
+
+If your `UITableView` **has** already loaded its content initially, or if you want to show/hide the contents of a subsection `BGRecursiveTableViewDataSourceSectionGroup` at any point later on, you can call this method:
+
+```objc
+- (void)insertOrRemoveRowsAndSetInnerSectionGroupAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isActive:(BOOL)active;
 ```
 
 See the "Example" project for a demonstration.
