@@ -55,7 +55,9 @@ An additional subclass variant besides the standard one for using `NSFetchedResu
 
 ## Debugging Tips
 
-If you run into a crash or exception, try disabling one or more of your section groups and/or their subsections to pinpoint the cause.
+Debugging exceptions and crashes with `UITableView` has always been kind of exciting since you can be somewhat in void of information. `BGRecursiveTableViewDataSource` makes this a little easier, since you can toggle sections in more complicated instances or comment them out of your code entirely to see if issues persist.
+
+It’s also possible to write more straightforward tests of your subclasses of modularized `BGRecursiveTableViewDataSourceSectionGroup` instances, versus trying to test a more intricate `UITableView`.
 
 ## Installation
 
