@@ -153,6 +153,8 @@
     }
     ////
     
+    [self beginUpdatesForSectionGroups:nil];
+    
     switch(type)
     {
         case NSFetchedResultsChangeInsert:
