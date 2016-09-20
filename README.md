@@ -57,11 +57,17 @@ You can add/remove entire blocks of sections and their subsections by calling th
 - (void)removeSectionGroupAndItsDisplayedSections:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
 ```
 
+**During the initial loading of the `BGRecursiveTableViewDataSource` only (before the `UITableView` has loaded or displayed any data),** section groups can and should simply be appended:
+
+```objc
+- (void)appendSectionGroupToNewDataSource:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
+```
+
 ### Recursion
 
-All methods are designed to work both on top-level sections and their subsections, hence the "recursive" nature and design of the module. However, deep levels of recursion are not recommended for performance reasons, as each level will bear some compounding overhead as the code recurses.
+All methods are designed to work both on top-level sections and their subsections at multiple levels, hence the "recursive" nature and design of the module. However, keep in mind that each level of recursion bears some compounding performance overhead. Unnecessary recursion should be avoided to ensure both optimal scrolling-performance at run-time and optimal code organization/structure from this module.
 
-Optimizations are always welcome.
+Enhancements and optimizations to the codebase are always welcome.
 
 ## Introducing Toggleable, Recursive “Subsections”
 
@@ -85,15 +91,17 @@ If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), 
 
 There are some **additional methods available** for this subclass, so check out its header file.
 
-### Using Core Data to generating empty sections
+### Using Core Data to generate empty sections
 
-An additional subclass variant besides the standard one for using `NSFetchedResultsController` is also available: `BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup` — This subclass will create **empty sections** based on the `NSFetchedResultsController` content. You can fill these with static or other content as you wish.
+An additional subclass variant besides the standard one for using `NSFetchedResultsController` is also available: **`BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup`**
 
-## Debugging Tips
+This subclass will instead create **empty sections** for each fetched object, based on the `NSFetchedResultsController` fetched results, while retaining the accessibility of said objects from your code. You can fill these sections with predefined static content or other dynamic content as you wish.
 
-Debugging exceptions and crashes with `UITableView` has always been kind of exciting since you can be somewhat in void of information. `BGRecursiveTableViewDataSource` makes this a little easier, since you can toggle sections in more complicated instances or comment them out of your code entirely to see if issues persist.
+## Debugging & Testing
 
-It’s also possible to write more straightforward tests of your subclasses of modularized `BGRecursiveTableViewDataSourceSectionGroup` instances, versus trying to test a more intricate `UITableView`.
+Debugging exceptions and crashes with `UITableView` has always been kind of tedious since you can be somewhat in void of information. `BGRecursiveTableViewDataSource` makes this a little easier, since you can toggle sections on/off or comment them out of your code entirely to see if issues persist. Likely, issues are in a much simpler format given the simplification and modularization of each `BGRecursiveTableViewDataSourceSectionGroup` implementation.
+
+It’s also possible to write more straightforward tests of your subclasses of `BGRecursiveTableViewDataSourceSectionGroup` instances also given this modularization. Trying to test a more intricate `UITableView` is more difficult.
 
 ## Installation
 
