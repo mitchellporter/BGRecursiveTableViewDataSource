@@ -41,7 +41,7 @@
 {
     _isOn=[sender isOn];
     
-    [self insertOrRemoveRowsAndSetInnerSectionGroupAtNonSubsectionIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] isActive:[sender isOn]];
+    [self insertOrRemoveRowsForInnerSectionGroupAtNonSubsectionIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] isActive:[sender isOn]];
     
 }
 
