@@ -7,41 +7,62 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)` with A
 [![License](https://img.shields.io/cocoapods/l/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
 [![Platform](https://img.shields.io/cocoapods/p/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
 
-## Overview
+## Objective
 
-**This module allows you to stack multiple `UITableViewDataSource(s)` in a single `UITableViewController` or `UITableView`,** and manage them dynamically. [Core Data](https://en.wikipedia.org/wiki/Core_Data) and [NSFetchedResultsController](https://developer.apple.com/reference/coredata/nsfetchedresultscontroller) are supported.
+Create a lightweight method of stacking and dynamically toggling existing, modular `UITableViewDataSource(s)` vertically for use with `UITableView` and `UITableViewController`, and making as few (if any) changes to them as possible.
 
-`UITableViewDataSource(s)` for more complicated views (consider **the "Settings" app on iOS**, for example) can be complex and difficult to maintain. Displaying multiple sections with varying and often dynamic content is necessary, yet so is avoiding "spaghetti code" that requires dissection and complex testing for changes.
+## Implementation
+
+**This module provides a liason between multiple stacked or "pinned" `UITableViewDataSource(s)` for use on a single `UITableView` or `UITableViewController`.** It also includes support for using `NSFetchedResultsController` with [Core Data](https://en.wikipedia.org/wiki/Core_Data) on a range of sections or subsections in a `UITableView`, rather than on the entire thing.
+
+With this module, adding toggleable subsections using switches and reusing "blocks" of `UITableView` data throughout your app becomes much easier and more straightforward, while retaining familiarity through the use of a variant of the well-known `UIKit` protocol **`UITableViewDataSource`**.
 
 ![Imagine trying to maintain `UITableViewDataSource(s)` like this!](https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/demo.png "Imagine trying to maintain `UITableViewDataSource(s)` like this!")
 
-> **... Imagine trying to maintain complex/dynamic `UITableViewDataSource(s)` like this one!**
+> **`UITableViewDataSource(s)` for more complicated views (like the "Settings" app on iOS, for example) can be complex and difficult to maintain.** Making changes to an implementation of this using `BGRecursiveTableViewDataSource` are much more straightforward, in part thanks to modularization and code re-use.
 
-One strategy for managing varying sections of content that are both static and dynamic is by using `BGRecursiveTableViewDataSource`.
+This module allows you to build **modular, subclassable `UITableViewDataSource(s)` and group them together dynamically** for use with one or more `UITableViewController(s)` easily, WITHOUT the "spaghetti code" that requires dissection and complex testing during revision or bug-fixes.
 
-This module allows you to build **modular, subclassable `UITableViewDataSource(s)` and group them together dynamically** for use with one or more `UITableViewController(s)` easily.
+## Support methods
 
-## Introducing Toggleable, Recursive “Subsections”
-
-The simplest application of `BGRecursiveTableViewDataSource` is without any recursion or "subsections". However, if you want toggleable or dynamic subsections that appear or disappear with the touch of a switch (for example), you may find the subsection functionality to be useful.
-
-Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** (`UITableViewDataSource` subclass) to an `NSIndexPath` within another `BGRecursiveTableViewDataSourceSectionGroup`, recursively. You may have it appear/disappear with a method call at any level in your top-level `BGRecursiveTableViewDataSource`, and its initial state of being expanded or hidden is configurable.
-
-## Accessing Top-Level `NSIndexPath(s)` and Resolving Subsections
-
-**From the top-level,** you can resolve the actual "sectionGroup" and "indexPath" of that `UITableViewDataSource`:
-
-```objc
-- (id)resolveSectionGroupAndInnerIndexPathForTopLevelIndexPath:(NSIndexPath *)indexPath matchBlock:(id (^)(BGRecursiveTableViewDataSourceSectionGroup *sectionGroup, NSIndexPath *innerIndexPath))matchBlock;
-```
-
-**From section groups themselves,** you can resolve the top-level "indexPath" as well:
+Part of the simplicity of this implentation comes from the reuse of `UITableViewDataSource` for groups of `UITableView` sections or subsections. If code within your `BGRecursiveTableViewDataSourceSectionGroup` (implementing `UITableViewDataSource`) needs to resolve its top-level `NSIndexPath` from its internal, offset `NSIndexPath`, this can be accomplished by calling this method on the data-source itself:
 
 ```objc
 - (NSIndexPath *)translateInternalIndexPathToTopLevel:(NSIndexPath *)indexPath forTopLevelSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
 ```
 
-**For other useful methods,** see the header files of each of the bundled classes.
+Convenience methods for inserting, reloading, or deleting rows and sections dynamically (and also beginning/ending updates on the data-sources themselves) are provided simply by calling said methods on the data-sources rather than on the `UITableView` directly:
+
+```objc
+- (void)beginUpdatesForSectionGroups:(NSSet <BGRecursiveTableViewDataSourceSectionGroup *>*)priorSectionGroups; // Use these internally instead of calling `UITableView` beginUpdates/endUpdates() methods.
+- (void)endUpdatesForSectionGroups:(NSSet <BGRecursiveTableViewDataSourceSectionGroup *>*)priorSectionGroups;
+
+- (void)insertSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
+- (void)deleteSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
+- (void)reloadSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
+
+- (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
+- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
+- (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
+```
+
+This also works for subsections as it would on top-level sections, hence the "recursive" description of the module. **For other useful methods,** see the header files of each of the bundled classes.
+
+## Introducing Toggleable, Recursive “Subsections”
+
+The simplest application of `BGRecursiveTableViewDataSource` is without any recursion or "subsections". However, if you want toggleable or dynamic subsections that appear or disappear within another section (with the touch of a switch, for example), you may find the subsection functionality to be quite useful.
+
+As with the standard, single-level basic implementation of `BGRecursiveTableViewDataSource`, the standard `BGRecursiveTableViewDataSourceSectionGroup` class (which implements the `UITableViewDataSource` protocol and can be subclassed) is used for subsections.
+
+Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** to an `NSIndexPath` in another section or subsection, and insert or hide all rows dynamically at run-time. Its initial state of being expanded or hidden is configurable.
+
+You can recursively resolve (from the top-level) which subsection an `NSIndexPath` belongs to by calling a method on the `BGRecursiveTableViewDataSource`:
+
+```objc
+- (id)resolveSectionGroupAndInnerIndexPathForTopLevelIndexPath:(NSIndexPath *)indexPath matchBlock:(id (^)(BGRecursiveTableViewDataSourceSectionGroup *sectionGroup, NSIndexPath *innerIndexPath))matchBlock;
+```
+
+See the "Example" project for a demonstration.
 
 ## Core Data & `NSFetchedResultsController`
 
