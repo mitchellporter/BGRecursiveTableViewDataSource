@@ -3,7 +3,7 @@ s.name             = "BGRecursiveTableViewDataSource"
 s.version          = "0.9.0"
 s.homepage         = "https://github.com/benguild/BGRecursiveTableViewDataSource"
 s.screenshots      = "https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/demo.png"
-s.summary          = "Recursive “stacking” and modularization of UITableViewDataSource(s) with Apple iOS's UIKit."
+s.summary          = "Recursive “stacking” and modularization of `UITableViewDataSource(s)` with Apple iOS's `UIKit`."
 s.license          = 'MIT'
 s.author           = { "Ben Guild" => "email@benguild.com" }
 s.source           = { :git => "https://github.com/benguild/BGRecursiveTableViewDataSource.git", :tag => s.version.to_s }
