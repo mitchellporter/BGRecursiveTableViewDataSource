@@ -95,9 +95,9 @@ See the "Example" project for a demonstration.
 
 ## Core Data & `NSFetchedResultsController`
 
-If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), you probably already know what you’re doing. Support for this is built-in using a provided subclass. Check out the “Example” project bundled with this pod/repo, and imagine subclassing and initializing **`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** instead with a `NSFetchedResultsController` as a property. — More information on this Apple provided class can be found here: https://developer.apple.com/reference/coredata/nsfetchedresultscontroller
+If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), you probably already know what you’re doing. Support for this is built-in using a provided subclass. Check out the “Example” project bundled with this pod/repo, and imagine subclassing and initializing **`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** instead with a `NSFetchedResultsController` as a property. — More information on `NSFetchedResultsController` can be found here: https://developer.apple.com/reference/coredata/nsfetchedresultscontroller
 
-Using it is easy:
+**`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** is a subclass of `BGRecursiveTableViewDataSourceSectionGroup` and inherits all of its methods and properties. Using it is easy:
 
 ```objc
 - (instancetype)initWithTableView:(UITableView *)tableView fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
@@ -109,11 +109,13 @@ You can also replace the `NSFetchedResultsController` with another one (or `nil`
 - (void)replaceFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
 ```
 
-Last, a subclassable convenience method is exposed for when objects are updated... allowing you to return `true` and avoid reloading the entire cell versus just making manual changes to its content directly:
+Last, a subclassable convenience method is exposed for when objects are updated... allowing you to return `true` and avoid reloading cells versus just making manual changes to their content directly:
 
 ```objc
 - (BOOL)updateCellAtIndexPathWithoutReloading:(NSIndexPath *)indexPath indexPathForFetchedResultControllerIfDifferent:(NSIndexPath *)newIndexPath becauseDidChangeObject:(id)anObject;
 ```
+
+This method **automatically avoids** calling `beginUpdates:` on the `UITableView` unless `false` is returned, so scrolling behavior/performance is not affected by updates alone with your own direct updates to the cell when using this implementation.
 
 ### Using Core Data to generate empty sections
 
@@ -121,11 +123,9 @@ An additional subclass variant besides the standard one for using `NSFetchedResu
 
 This subclass will instead create **empty sections** for each fetched object if subclassed to return `true` from its `displayEmptySectionsForFetchedResultsControllerObjects:` method. It does this based on the `NSFetchedResultsController` fetched results, but adds no rows. The fetched objects are still accessible from your code within the `BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup` itself, and you can instead choose to display other static or dynamic content in their place as you wish.
 
-## Debugging & Testing
+## Debugging Tips
 
-Debugging exceptions and crashes with `UITableView` has always been kind of tedious since you can be somewhat in void of information. `BGRecursiveTableViewDataSource` makes this a little easier, since you can toggle sections on/off or comment them out of your code entirely to see if issues persist. Likely, issues are in a much simpler format given the simplification and modularization of each `BGRecursiveTableViewDataSourceSectionGroup` implementation.
-
-It’s also possible to write more straightforward tests of your subclasses of `BGRecursiveTableViewDataSourceSectionGroup` instances also given this modularization. Trying to test a more intricate `UITableView` is more difficult.
+Debugging exceptions and crashes with `UITableView` has always been kind of tedious since you can be somewhat in a void of information. `BGRecursiveTableViewDataSource` makes this a little easier, since you can toggle sections on/off or comment them out of your code entirely to see if issues persist. Likely, issues are in a much simpler format given the simplification and modularization of each `BGRecursiveTableViewDataSourceSectionGroup` implementation.
 
 ## Installation
 
