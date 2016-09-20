@@ -65,7 +65,7 @@ You can add/remove entire blocks of sections and their subsections by calling th
 
 ### Recursion
 
-All methods are designed to work both on top-level sections and their subsections at multiple levels, hence the "recursive" nature and design of the module. However, keep in mind that each level of recursion bears some compounding performance overhead. Unnecessary recursion should be avoided to ensure both optimal scrolling-performance at run-time and optimal code organization/structure benefits from this module.
+All methods are designed to work both on top-level sections and their subsections at multiple levels, hence the "recursive" nature and design of the module. However, keep in mind that each level of recursion bears some compounding performance overhead. Unnecessary recursion should be avoided to ensure both optimal scrolling-performance at run-time and the optimal code organization/structure benefits from this module.
 
 Enhancements and optimizations to the codebase are always welcome.
 
@@ -77,19 +77,17 @@ The simplest application of `BGRecursiveTableViewDataSource` is without any recu
 
 As with the standard, single-level basic implementation of `BGRecursiveTableViewDataSource`, the standard `BGRecursiveTableViewDataSourceSectionGroup` class (which implements the `UITableViewDataSource` protocol and can be subclassed) is used for subsections.
 
-Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** to an `NSIndexPath` in another section or subsection, and insert or hide all rows dynamically at run-time with a single method call. Its initial state of being expanded or hidden is configurable.
+Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** to an `NSIndexPath` in another `BGRecursiveTableViewDataSourceSectionGroup`, and insert or hide all rows dynamically at run-time with a single method call. Its initial state of being expanded or hidden is configurable.
 
 ### Usage
 
-To set another `BGRecursiveTableViewDataSourceSectionGroup` to appear at an `NSIndexPath` **within another `BGRecursiveTableViewDataSourceSectionGroup`**, call this method:
+To set another `BGRecursiveTableViewDataSourceSectionGroup` to appear at an `NSIndexPath` **within another `BGRecursiveTableViewDataSourceSectionGroup`**, call this method **on the parent** (not the child):
 
 ```objc
 - (void)setInnerSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)innerSectionGroup forRowAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isInitiallyActive:(BOOL)active;
 ```
 
-**If your `UITableView` has NOT loaded its data yet,** setting "isInitiallyActive" to `true` will cause its content to appear immediately within its parent section at the `NSIndexPath` configured. 👍🏻
-
-If your `UITableView` **has** already loaded its content initially, or if you want to show/hide the contents of a subsection `BGRecursiveTableViewDataSourceSectionGroup` at any point later on, you can call this method:
+**If your `UITableView` has NOT loaded its data yet,** that's all there is to it. 👍🏻 — If your `UITableView` **has** already loaded its data, or if you want to show/hide the contents of a subsection `BGRecursiveTableViewDataSourceSectionGroup` at any point later on, you can use this method:
 
 ```objc
 - (void)insertOrRemoveRowsForInnerSectionGroupAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isActive:(BOOL)active;
@@ -99,9 +97,9 @@ See the "Example" project for a demonstration.
 
 ## Core Data & `NSFetchedResultsController`
 
-If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), you probably already know what you’re doing. Support for this is built-in using a provided subclass. Check out the “Example” project bundled with this pod/repo, and imagine subclassing and initializing **`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** instead with a `NSFetchedResultsController` as a property. — More information on `NSFetchedResultsController` can be found here: https://developer.apple.com/reference/coredata/nsfetchedresultscontroller
+If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), you probably already know what you’re doing. Support for this is built-in using a provided subclass. Check out the "Example" project bundled with this pod/repo, and imagine subclassing and initializing **`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** instead with a `NSFetchedResultsController` as a property. — More information on `NSFetchedResultsController` can be found here: https://developer.apple.com/reference/coredata/nsfetchedresultscontroller
 
-**`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** is a subclass of `BGRecursiveTableViewDataSourceSectionGroup` and inherits all of its methods and properties. Using it is easy:
+**`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** is a subclass of `BGRecursiveTableViewDataSourceSectionGroup` and not only inherits all of its methods and properties, but also implements all of the standard section/row handling code for `NSFetchedResultsController`. — Using it is easy:
 
 ```objc
 - (instancetype)initWithTableView:(UITableView *)tableView fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
@@ -119,7 +117,7 @@ Last, a subclassable convenience method is exposed for when objects are updated.
 - (BOOL)updateCellAtIndexPathWithoutReloading:(NSIndexPath *)indexPath indexPathForFetchedResultControllerIfDifferent:(NSIndexPath *)newIndexPath becauseDidChangeObject:(id)anObject;
 ```
 
-This method **automatically avoids** calling `beginUpdates:` on the `UITableView` unless `false` is returned, so scrolling behavior/performance is not affected by updates alone with your own direct updates to the cell when using this implementation.
+Implementation of this method **automatically avoids** calling `beginUpdates:` on the `UITableView` if `true` is returned, so scrolling behavior/performance is not affected by updates made directly to cells (by you).
 
 ### Using Core Data to generate empty sections
 
