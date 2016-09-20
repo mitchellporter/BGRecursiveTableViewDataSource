@@ -1,7 +1,7 @@
 # BGRecursiveTableViewDataSource
-Recursive “stacking” and modularization of `UITableViewDataSource(s)` with Apple iOS's `UIKit`
+Recursive “stacking” and modularization of `UITableViewDataSource(s)` with Apple iOS's `UIKit`.
 
-**Documentation and demo are a work in process,** but code is stable.
+**Documentation and demo are a work in progress,** but code is stable.
 
 [![Version](https://img.shields.io/cocoapods/v/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
 [![License](https://img.shields.io/cocoapods/l/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
@@ -25,13 +25,13 @@ This module allows you to build **modular, subclassable `UITableViewDataSource` 
 
 ## Support methods
 
-Part of the simplicity of this implentation comes from the reuse of `UITableViewDataSource` for groups of `UITableView` sections or subsections. If the code within your **`BGRecursiveTableViewDataSourceSectionGroup`** (implementing `UITableViewDataSource`) needs to resolve its top-level `NSIndexPath` from its internal, offset `NSIndexPath`, this can be accomplished by calling this method on the `BGRecursiveTableViewDataSourceSectionGroup` itself:
+Part of the simplicity of this implentation comes from the reuse of `UITableViewDataSource` for groups of `UITableView` sections or subsections. If the code within your **`BGRecursiveTableViewDataSourceSectionGroup`** (implementing `UITableViewDataSource`) needs to resolve its top-level `NSIndexPath` from its internal, offset `NSIndexPath` (based on its rows and sections' overall position given other prior sections from any other preceding section groups), this can be accomplished by calling this method on the `BGRecursiveTableViewDataSourceSectionGroup` itself:
 
 ```objc
 - (NSIndexPath *)translateInternalIndexPathToTopLevel:(NSIndexPath *)indexPath;
 ```
 
-Convenience methods for inserting, reloading, or deleting rows and sections dynamically (and also beginning/ending updates on the `BGRecursiveTableViewDataSourceSectionGroup` themselves) are provided simply by calling said methods on the data-sources rather than on the `UITableView` directly:
+Convenience methods for inserting, reloading, or deleting rows and sections dynamically (and also beginning/ending updates on the `BGRecursiveTableViewDataSourceSectionGroup(s)` themselves) are provided simply by calling said methods on the data-sources rather than on the `UITableView` directly:
 
 ```objc
 - (void)beginUpdatesForSectionGroups:(NSSet <BGRecursiveTableViewDataSourceSectionGroup *>*)priorSectionGroups; // Use these internally instead of calling `UITableView` beginUpdates/endUpdates() methods.
@@ -46,7 +46,7 @@ Convenience methods for inserting, reloading, or deleting rows and sections dyna
 - (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
 ```
 
-It would be possible to do this yourself in a simple, single-level implementation using `translateInternalIndexPathToTopLevel:indexPath:` and then calling the appropriate methods on your `UITableView`, but when using subsections there is some mapping of indexes required and these methods will take care of that for you.
+It is possible to do this yourself in a simple, single-level implementation using `translateInternalIndexPathToTopLevel:indexPath:` and then calling the appropriate methods on your `UITableView`, but when using subsections in any section group, there is some internal mapping/shifting of indexes required. These methods will take care of that for you.
 
 ### Inserting or Removing Entire Section Groups
 
