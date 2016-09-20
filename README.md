@@ -99,7 +99,7 @@ See the "Example" project for a demonstration.
 
 If you’re using Apple's [Core Data](https://en.wikipedia.org/wiki/Core_Data), you probably already know what you’re doing. Support for this is built-in using a provided subclass. Check out the "Example" project bundled with this pod/repo, and imagine subclassing and initializing **`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** instead with a `NSFetchedResultsController` as a property. — More information on `NSFetchedResultsController` can be found here: https://developer.apple.com/reference/coredata/nsfetchedresultscontroller
 
-**`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** is a subclass of `BGRecursiveTableViewDataSourceSectionGroup` and not only inherits all of its methods and properties, but also implements all of the standard section/row handling code for `NSFetchedResultsController`. — Using it is easy:
+**`BGRecursiveTableViewDataSourceFetchedResultsSectionGroup`** is a subclass of `BGRecursiveTableViewDataSourceSectionGroup` and not only inherits all of its parent's methods and properties, but also implements all of the standard section/row handling code for `NSFetchedResultsController`. Using it is easy:
 
 ```objc
 - (instancetype)initWithTableView:(UITableView *)tableView fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
