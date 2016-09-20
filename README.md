@@ -73,6 +73,8 @@ Enhancements and optimizations to the codebase are always welcome.
 
 The simplest application of `BGRecursiveTableViewDataSource` is without any recursion or "subsections". However, if you want toggleable or dynamic subsections that appear or disappear within another section (with the touch of a switch, for example), you may find the subsection functionality to be quite useful.
 
+![Demo of switches and recursive subsections](https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/switches.gif "Demo of switches and recursive subsections")
+
 As with the standard, single-level basic implementation of `BGRecursiveTableViewDataSource`, the standard `BGRecursiveTableViewDataSourceSectionGroup` class (which implements the `UITableViewDataSource` protocol and can be subclassed) is used for subsections.
 
 Subsections allow you to **“pin” a `BGRecursiveTableViewDataSourceSectionGroup`** to an `NSIndexPath` in another section or subsection, and insert or hide all rows dynamically at run-time with a single method call. Its initial state of being expanded or hidden is configurable.
