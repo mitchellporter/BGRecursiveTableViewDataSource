@@ -9,11 +9,11 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)` with A
 
 To provide a lightweight module for the vertical stacking and dynamic toggling of existing, modular **`UITableViewDataSource` implementations** for a `UITableView` and `UITableViewController`, while making as few (if any) changes to `UITableViewDataSource` as possible.
 
-![Structural usage diagram](https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/diagram.png "Structural usage diagram")
-
 ## Implementation
 
 **This module provides a liason between multiple stacked or "pinned" `UITableViewDataSource(s)` for use on a single `UITableView` or `UITableViewController`.** It also includes support for using `NSFetchedResultsController` with [Core Data](https://en.wikipedia.org/wiki/Core_Data) on a range of sections or subsections in a `UITableView`, rather than on the entire thing.
+
+![Structural usage diagram](https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/diagram.png "Structural usage diagram")
 
 With this module, adding toggleable subsections using switches and reusing "blocks" of `UITableView` data throughout your app becomes much easier and more straightforward, while retaining familiarity through the implementation of the well-known `UIKit` protocol, **`UITableViewDataSource`**.
 
