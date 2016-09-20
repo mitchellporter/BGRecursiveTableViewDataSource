@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Ben Guild. All rights reserved.
 //
 
-#import "BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.h"
+#import "../BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.h"
 
 @interface BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup : BGRecursiveTableViewDataSourceFetchedResultsSectionGroup
 
