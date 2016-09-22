@@ -38,6 +38,7 @@
 #pragma mark - Add/remove inner "section groups"
 
 - (void)setInnerSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)innerSectionGroup forRowAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isInitiallyActive:(BOOL)active; // Assign a subsection to appear/disappear below a parent row. — NOTE: Subsection rows are not factored into this NSIndexPath.
+- (void)removeInnerSectionGroupForRowAtNonSubsectionIndexPath:(NSIndexPath *)indexPath; // NOTE: Be sure to remove rows using the method below if the entire section isn't or hasn't been removed.
 
 - (void)insertOrRemoveRowsForInnerSectionGroupAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isActive:(BOOL)active;
 

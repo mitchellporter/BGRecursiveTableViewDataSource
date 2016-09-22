@@ -244,6 +244,30 @@
     
 }
 
+- (void)removeInnerSectionGroupForRowAtNonSubsectionIndexPath:(NSIndexPath *)indexPath
+{
+    NSMutableDictionary<NSNumber *, BGRecursiveTableViewDataSourceSectionGroup *> *activeInnerSectionGroupsForSection=[_activeInnerSectionGroups objectForKey:@([indexPath section])];
+    NSMutableDictionary<NSNumber *, BGRecursiveTableViewDataSourceSectionGroup *> *inactiveInnerSectionGroupsForSection=[_inactiveInnerSectionGroups objectForKey:@([indexPath section])];
+    
+    BGRecursiveTableViewDataSourceSectionGroup *activeInnerSectionGroup=[activeInnerSectionGroupsForSection objectForKey:@([indexPath row])];
+    BGRecursiveTableViewDataSourceSectionGroup *inactiveInnerSectionGroup=[inactiveInnerSectionGroupsForSection objectForKey:@([indexPath row])];
+    
+    if (activeInnerSectionGroup)
+    {
+        [activeInnerSectionGroupsForSection removeObjectForKey:@([indexPath row])];
+        [_sectionGroups removeObject:activeInnerSectionGroup];
+        
+    }
+    
+    if (inactiveInnerSectionGroup)
+    {
+        [inactiveInnerSectionGroupsForSection removeObjectForKey:@([indexPath row])];
+        [_sectionGroups removeObject:inactiveInnerSectionGroup];
+        
+    }
+    
+}
+
 - (void)insertOrRemoveRowsForInnerSectionGroupAtNonSubsectionIndexPath:(NSIndexPath *)indexPath isActive:(BOOL)active
 {
     [self initiateInnerSectionGroupSetsIfNecessary];

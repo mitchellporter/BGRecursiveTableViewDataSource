@@ -97,7 +97,7 @@
     
 }
 
-- (NSIndexSet *)actualSectionIndexesForSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
+- (NSRange)actualSectionIndexRangeForSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
 {
     NSUInteger priorSectionCount=0;
     
@@ -107,7 +107,7 @@
         
         if (sectionGroupToCheck==sectionGroup)
         {
-            return (numberOfSectionsInThisGroup ? [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(priorSectionCount, numberOfSectionsInThisGroup)] : nil);
+            return NSMakeRange(priorSectionCount, numberOfSectionsInThisGroup);
             
         }
         ////
@@ -118,7 +118,15 @@
     
     [self throwExceptionForSectionGroupNotFound];
     
-    return [NSIndexSet new];
+    return NSMakeRange(NSNotFound, 0);
+    
+}
+
+- (NSIndexSet *)actualSectionIndexesForSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
+{
+    NSRange rangeOfIndexes=[self actualSectionIndexRangeForSectionGroup:sectionGroup];
+    
+    return (rangeOfIndexes.length==0 ? nil : [[NSIndexSet alloc] initWithIndexesInRange:rangeOfIndexes]);
     
 }
 
@@ -158,11 +166,11 @@
 
 - (void)insertSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup atIndexForSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroupForIndex insertAfter:(BOOL)insertAfter
 {
-    NSIndexSet *sectionIndexesForThisSectionGroup=[self actualSectionIndexesForSectionGroup:sectionGroupForIndex]; // NOTE: This function doesn't need to throw an exception because `actualSectionIndexesForSectionGroup` throws one. :)
+    NSRange sectionIndexRangeForThisSectionGroup=[self actualSectionIndexRangeForSectionGroup:sectionGroupForIndex]; // NOTE: This function doesn't need to throw an exception because `actualSectionIndexRangeForSectionGroup` throws one. :)
     
     [_sectionGroups insertObject:sectionGroup atIndex:[_sectionGroups indexOfObject:sectionGroupForIndex]+insertAfter];
     
-    [[self tableView] insertSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange((insertAfter ? [sectionIndexesForThisSectionGroup lastIndex]+1 : [sectionIndexesForThisSectionGroup firstIndex]), [sectionGroup numberOfSectionsInTableView:[self tableView]])] withRowAnimation:UITableViewRowAnimationFade];
+    [[self tableView] insertSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange((insertAfter ? sectionIndexRangeForThisSectionGroup.location+sectionIndexRangeForThisSectionGroup.length : sectionIndexRangeForThisSectionGroup.location), [sectionGroup numberOfSectionsInTableView:[self tableView]])] withRowAnimation:UITableViewRowAnimationFade];
     
 }
 
@@ -203,7 +211,7 @@
 
 - (NSIndexPath *)translateInternalIndexPathToTopLevel:(NSIndexPath *)indexPath forTopLevelSectionGroup:(BGRecursiveTableViewDataSourceSectionGroup *)sectionGroup;
 {
-    return [NSIndexPath indexPathForRow:[indexPath row] inSection:[[(BGRecursiveTableViewDataSource *)[[self tableView] dataSource] actualSectionIndexesForSectionGroup:sectionGroup] firstIndex]+[indexPath section]];
+    return [NSIndexPath indexPathForRow:[indexPath row] inSection:[self actualSectionIndexRangeForSectionGroup:sectionGroup].location+[indexPath section]];
     
 }
 
