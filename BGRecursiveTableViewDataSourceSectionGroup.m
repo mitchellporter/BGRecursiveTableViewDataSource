@@ -390,18 +390,18 @@
     {
         for (NSNumber *key in [[dictionary allKeys] sortedArrayUsingSelector:@selector(compare:)])
         {
-            NSUInteger newKey=NSNotFound;
+            NSInteger newKey=NSNotFound;
             
-            if ([key integerValue]>indexTarget)
+            if ([key integerValue]>=indexTarget)
             {
                 if (offset<0)
                 {
-                    newKey=[key integerValue]+offset;
+                    newKey=[key integerValue]-offset;
                     
                 }
                 else if (offset>0)
                 {
-                    newKey=[key integerValue]-offset;
+                    newKey=[key integerValue]+offset;
                     
                 }
             

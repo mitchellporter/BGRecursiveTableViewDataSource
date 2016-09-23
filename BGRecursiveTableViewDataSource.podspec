@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "BGRecursiveTableViewDataSource"
-s.version          = "1.0.1"
+s.version          = "1.1.0"
 s.homepage         = "https://github.com/benguild/BGRecursiveTableViewDataSource"
 s.screenshots      = "https://raw.github.com/benguild/BGRecursiveTableViewDataSource/master/demo.png"
 s.summary          = "Recursive “stacking” and modularization of `UITableViewDataSource(s)` with Apple iOS's `UIKit`."
