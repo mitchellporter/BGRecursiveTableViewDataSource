@@ -5,6 +5,10 @@ Recursive “stacking” and modularization of `UITableViewDataSource(s)` with A
 [![License](https://img.shields.io/cocoapods/l/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
 [![Platform](https://img.shields.io/cocoapods/p/BGRecursiveTableViewDataSource.svg?style=flat)](http://cocoapods.org/pods/BGRecursiveTableViewDataSource)
 
+### Some other helpful Cocoa Pods:
+- **`BGPersistentStoreManager`** ([link](https://github.com/benguild/BGPersistentStoreManager)) — A simple singleton/wrapper/manager for the Apple iOS/macOS/etc. "Core Data" `NSPersistentStore` object/contexts.
+- **`BGTableViewRowActionWithImage`** ([link](https://github.com/benguild/BGTableViewRowActionWithImage)) — A variation on the iOS 8.0+ `UITableViewRowAction` to support icons, with text below. Similar to the iOS 9 Mail application and various third-party applications.
+
 ## Objective
 
 To provide a lightweight module for the vertical stacking and dynamic toggling of existing, modular **`UITableViewDataSource` implementations** for a `UITableView` and `UITableViewController`, while making as few (if any) changes to `UITableViewDataSource` as possible.
