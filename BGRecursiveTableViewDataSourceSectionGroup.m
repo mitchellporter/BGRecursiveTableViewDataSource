@@ -394,17 +394,8 @@
             
             if ([key integerValue]>=indexTarget)
             {
-                if (offset<0)
-                {
-                    newKey=[key integerValue]-offset;
-                    
-                }
-                else if (offset>0)
-                {
-                    newKey=[key integerValue]+offset;
-                    
-                }
-            
+                newKey=[key integerValue]+offset;
+                
             }
             
             if (newKey!=NSNotFound)
