@@ -146,6 +146,10 @@
         NSIndexPath *translatedIndexPath=[self translateInternalIndexPathToTopLevel:indexPath];
         
         [[self tableView] deleteSections:[NSIndexSet indexSetWithIndex:[translatedIndexPath section]] withRowAnimation:animation];
+        
+        [_activeInnerSectionGroups removeObjectForKey:@([indexPath section])];
+        [_inactiveInnerSectionGroups removeObjectForKey:@([indexPath section])];
+        
         [self shiftAllInnerSectionGroupIndexPathAssociationsByOffset:[NSIndexPath indexPathForRow:0 inSection:-1] atIndexPath:indexPath];
         
     } ];
@@ -186,6 +190,10 @@
     [indexPaths enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull indexPath, NSUInteger idx, BOOL * _Nonnull stop)
     {
         [[self tableView] deleteRowsAtIndexPaths:@[[self translateInternalIndexPathToTopLevel:indexPath]] withRowAnimation:animation];
+        
+        [[_activeInnerSectionGroups objectForKey:@([indexPath section])] removeObjectForKey:@([indexPath row])];
+        [[_inactiveInnerSectionGroups objectForKey:@([indexPath section])] removeObjectForKey:@([indexPath row])];
+        
         [self shiftAllInnerSectionGroupIndexPathAssociationsByOffset:[NSIndexPath indexPathForRow:-1 inSection:0] atIndexPath:indexPath];
         
     } ];
