@@ -388,7 +388,7 @@
     
     void (^shiftDictionaryKeys)(NSMutableDictionary *, NSInteger, NSUInteger)=^(NSMutableDictionary *dictionary, NSInteger offset, NSUInteger indexTarget)
     {
-        for (NSNumber *key in [[dictionary allKeys] sortedArrayUsingSelector:@selector(compare:)])
+        for (NSNumber *key in (offset>0 ? [[[dictionary allKeys] sortedArrayUsingSelector:@selector(compare:)] reverseObjectEnumerator] : [[dictionary allKeys] sortedArrayUsingSelector:@selector(compare:)]))
         {
             NSInteger newKey=NSNotFound;
             
