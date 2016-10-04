@@ -131,8 +131,8 @@
         NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:idx];
         NSIndexPath *translatedIndexPath=[self translateInternalIndexPathToTopLevel:indexPath];
         
-        [[self tableView] insertSections:[NSIndexSet indexSetWithIndex:[translatedIndexPath section]] withRowAnimation:animation];
         [self shiftAllInnerSectionGroupIndexPathAssociationsByOffset:[NSIndexPath indexPathForRow:0 inSection:1] atIndexPath:indexPath];
+        [[self tableView] insertSections:[NSIndexSet indexSetWithIndex:[translatedIndexPath section]] withRowAnimation:animation];
         
     } ];
     
