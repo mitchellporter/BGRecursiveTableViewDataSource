@@ -222,17 +222,43 @@
         }();
         ////
         
-        /*
-        deleteSectionAtIndex(0);
-        deleteSectionAtIndex(2);
-        deleteSectionAtIndex(1);
+        ^{
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(1)] forKey:@(0)];
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(2)] forKey:@(1)];
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(3)] forKey:@(2)];
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(4)] forKey:@(3)];
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(5)] forKey:@(4)];
+            [subSectionGroups removeObjectForKey:@(5)];
+            
+            deleteSectionAtIndex(0);
+            
+            testSections();
+            
+        }();
         
-        testSections();
-        */
+        ^{
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(3)] forKey:@(2)];
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(4)] forKey:@(3)];
+            [subSectionGroups removeObjectForKey:@(4)];
+            
+            deleteSectionAtIndex(2);
+            
+            testSections();
+            
+        }();
+        
+        ^{
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(2)] forKey:@(1)];
+            [subSectionGroups setObject:[subSectionGroups objectForKey:@(3)] forKey:@(2)];
+            [subSectionGroups removeObjectForKey:@(3)];
+            
+            deleteSectionAtIndex(1);
+            
+            testSections();
+            
+        }();
         
     }();
-    
-    
     
 }
 

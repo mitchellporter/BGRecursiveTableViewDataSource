@@ -24,7 +24,25 @@
 		3D1681191D90434300DF0144 /* BGRecursiveTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681161D90434300DF0144 /* BGRecursiveTableViewDataSource.m */; };
 		3D16811A1D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */; };
 		3D16811D1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16811C1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m */; };
+		3D3AAB3C1DA52FBC0093D60F /* ShiftingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AAB3B1DA52FBC0093D60F /* ShiftingTest.m */; };
+		3D3AAB3D1DA530D00093D60F /* AddNewDynamicExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16811C1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m */; };
+		3D3AAB3E1DA530D00093D60F /* BlueExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680EF1D902ED600DF0144 /* BlueExampleSectionGroup.m */; };
+		3D3AAB3F1DA530D00093D60F /* GreenExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680EC1D902EC900DF0144 /* GreenExampleSectionGroup.m */; };
+		3D3AAB401DA530D00093D60F /* RedExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680E91D902EB500DF0144 /* RedExampleSectionGroup.m */; };
+		3D3AAB411DA530D00093D60F /* SwitchToggledExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1680E61D902EA000DF0144 /* SwitchToggledExampleSectionGroup.m */; };
+		3D3AAB421DA530D00093D60F /* YellowExampleSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16810E1D90396900DF0144 /* YellowExampleSectionGroup.m */; };
+		3D3AAB481DA537FF0093D60F /* TestingMutableSectionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AAB471DA537FF0093D60F /* TestingMutableSectionGroup.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D3AAB301DA5263E0093D60F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D16809C1D9026F400DF0144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1680A31D9026F400DF0144;
+			remoteInfo = "BGRecursiveTableViewDataSource Example";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3D1680A41D9026F400DF0144 /* BGRecursiveTableViewDataSource Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BGRecursiveTableViewDataSource Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +78,23 @@
 		3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGRecursiveTableViewDataSourceSectionGroup.m; path = ../../BGRecursiveTableViewDataSourceSectionGroup.m; sourceTree = "<group>"; };
 		3D16811B1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewDynamicExampleSectionGroup.h; sourceTree = "<group>"; };
 		3D16811C1D9044C000DF0144 /* AddNewDynamicExampleSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewDynamicExampleSectionGroup.m; sourceTree = "<group>"; };
+		3D3AAB2B1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BGRecursiveTableViewDataSource Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D3AAB2F1DA5263E0093D60F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D3AAB381DA527170093D60F /* BGRecursiveTableViewDataSourceSectionGroup+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BGRecursiveTableViewDataSourceSectionGroup+Test.h"; sourceTree = "<group>"; };
+		3D3AAB3B1DA52FBC0093D60F /* ShiftingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiftingTest.m; sourceTree = "<group>"; };
+		3D3AAB461DA537FF0093D60F /* TestingMutableSectionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingMutableSectionGroup.h; sourceTree = "<group>"; };
+		3D3AAB471DA537FF0093D60F /* TestingMutableSectionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingMutableSectionGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3D1680A11D9026F400DF0144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D3AAB281DA5263E0093D60F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +107,9 @@
 		3D16809B1D9026F400DF0144 = {
 			isa = PBXGroup;
 			children = (
-				3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
 				3D1681141D90433500DF0144 /* BGRecursiveTableViewDataSource */,
+				3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
+				3D3AAB2C1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests */,
 				3D1680A51D9026F400DF0144 /* Products */,
 				3D1680A71D9026F400DF0144 /* Supporting Files */,
 			);
@@ -87,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3D1680A41D9026F400DF0144 /* BGRecursiveTableViewDataSource Example.app */,
+				3D3AAB2B1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,8 +206,19 @@
 				3D1681171D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.h */,
 				3D1681181D90434300DF0144 /* BGRecursiveTableViewDataSourceSectionGroup.m */,
 			);
-			name = BGRecursiveTableViewDataSource;
-			path = "BGRecursiveTableViewDataSource Example";
+			path = BGRecursiveTableViewDataSource;
+			sourceTree = "<group>";
+		};
+		3D3AAB2C1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AAB381DA527170093D60F /* BGRecursiveTableViewDataSourceSectionGroup+Test.h */,
+				3D3AAB2F1DA5263E0093D60F /* Info.plist */,
+				3D3AAB3B1DA52FBC0093D60F /* ShiftingTest.m */,
+				3D3AAB461DA537FF0093D60F /* TestingMutableSectionGroup.h */,
+				3D3AAB471DA537FF0093D60F /* TestingMutableSectionGroup.m */,
+			);
+			path = "BGRecursiveTableViewDataSource Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +241,24 @@
 			productReference = 3D1680A41D9026F400DF0144 /* BGRecursiveTableViewDataSource Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3D3AAB2A1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D3AAB341DA5263E0093D60F /* Build configuration list for PBXNativeTarget "BGRecursiveTableViewDataSource Tests" */;
+			buildPhases = (
+				3D3AAB271DA5263E0093D60F /* Sources */,
+				3D3AAB281DA5263E0093D60F /* Frameworks */,
+				3D3AAB291DA5263E0093D60F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D3AAB311DA5263E0093D60F /* PBXTargetDependency */,
+			);
+			name = "BGRecursiveTableViewDataSource Tests";
+			productName = "BGRecursiveTableViewDataSource Tests";
+			productReference = 3D3AAB2B1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,7 +270,12 @@
 				TargetAttributes = {
 					3D1680A31D9026F400DF0144 = {
 						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					3D3AAB2A1DA5263E0093D60F = {
+						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Manual;
+						TestTargetID = 3D1680A31D9026F400DF0144;
 					};
 				};
 			};
@@ -226,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				3D1680A31D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
+				3D3AAB2A1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +305,13 @@
 			files = (
 				3D1680BA1D9026F400DF0144 /* LaunchScreen.storyboard in Resources */,
 				3D1680B71D9026F400DF0144 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D3AAB291DA5263E0093D60F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +340,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D3AAB271DA5263E0093D60F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3AAB3F1DA530D00093D60F /* GreenExampleSectionGroup.m in Sources */,
+				3D3AAB481DA537FF0093D60F /* TestingMutableSectionGroup.m in Sources */,
+				3D3AAB411DA530D00093D60F /* SwitchToggledExampleSectionGroup.m in Sources */,
+				3D3AAB3C1DA52FBC0093D60F /* ShiftingTest.m in Sources */,
+				3D3AAB3E1DA530D00093D60F /* BlueExampleSectionGroup.m in Sources */,
+				3D3AAB401DA530D00093D60F /* RedExampleSectionGroup.m in Sources */,
+				3D3AAB421DA530D00093D60F /* YellowExampleSectionGroup.m in Sources */,
+				3D3AAB3D1DA530D00093D60F /* AddNewDynamicExampleSectionGroup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D3AAB311DA5263E0093D60F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1680A31D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */;
+			targetProxy = 3D3AAB301DA5263E0093D60F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3D1680B81D9026F400DF0144 /* LaunchScreen.storyboard */ = {
@@ -374,12 +472,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -387,12 +488,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3D3AAB321DA5263E0093D60F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGRecursiveTableViewDataSource Example.app/BGRecursiveTableViewDataSource Example";
+			};
+			name = Debug;
+		};
+		3D3AAB331DA5263E0093D60F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGRecursiveTableViewDataSource Example.app/BGRecursiveTableViewDataSource Example";
 			};
 			name = Release;
 		};
@@ -413,6 +543,15 @@
 			buildConfigurations = (
 				3D1680BF1D9026F400DF0144 /* Debug */,
 				3D1680C01D9026F400DF0144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D3AAB341DA5263E0093D60F /* Build configuration list for PBXNativeTarget "BGRecursiveTableViewDataSource Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D3AAB321DA5263E0093D60F /* Debug */,
+				3D3AAB331DA5263E0093D60F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
