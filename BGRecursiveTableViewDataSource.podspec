@@ -10,13 +10,12 @@ s.source           = { :git => "https://github.com/benguild/BGRecursiveTableView
 s.social_media_url = 'https://twitter.com/benguild'
 
 s.source_files     = 'BGRecursiveTableViewDataSource.{h,m}', 'BGRecursiveTableViewDataSourceSectionGroup.{h,m}', 'BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup.{h,m}', 'BGRecursiveTableViewDataSourceSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsSectionGroup/BGRecursiveTableViewDataSourceFetchedResultsEmptySectionGroup.{h,m}'
+# s.private_header_files = 'Example/BGRecursiveTableViewDataSource_Tests/*.h' # NOTE: This is commented out because this file is not included above. However, it should be omitted in any case.
 
 s.platform     = :ios, '8.0'
 s.requires_arc = true
 
 s.framework = 'UIKit'
 s.framework = 'CoreData'
-
-s.private_header_files = 'Example/BGRecursiveTableViewDataSource_Tests/*.h'
 
 end
