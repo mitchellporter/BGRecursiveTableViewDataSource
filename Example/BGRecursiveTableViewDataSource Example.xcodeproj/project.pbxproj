@@ -109,7 +109,7 @@
 			children = (
 				3D1681141D90433500DF0144 /* BGRecursiveTableViewDataSource */,
 				3D1680A61D9026F400DF0144 /* BGRecursiveTableViewDataSource Example */,
-				3D3AAB2C1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests */,
+				3D3AAB2C1DA5263E0093D60F /* BGRecursiveTableViewDataSource_Tests */,
 				3D1680A51D9026F400DF0144 /* Products */,
 				3D1680A71D9026F400DF0144 /* Supporting Files */,
 			);
@@ -209,7 +209,7 @@
 			path = BGRecursiveTableViewDataSource;
 			sourceTree = "<group>";
 		};
-		3D3AAB2C1DA5263E0093D60F /* BGRecursiveTableViewDataSource Tests */ = {
+		3D3AAB2C1DA5263E0093D60F /* BGRecursiveTableViewDataSource_Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3D3AAB381DA527170093D60F /* BGRecursiveTableViewDataSourceSectionGroup+Test.h */,
@@ -218,7 +218,7 @@
 				3D3AAB461DA537FF0093D60F /* TestingMutableSectionGroup.h */,
 				3D3AAB471DA537FF0093D60F /* TestingMutableSectionGroup.m */,
 			);
-			path = "BGRecursiveTableViewDataSource Tests";
+			path = BGRecursiveTableViewDataSource_Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +504,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Tests/Info.plist";
+				INFOPLIST_FILE = BGRecursiveTableViewDataSource_Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,7 +518,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "BGRecursiveTableViewDataSource Tests/Info.plist";
+				INFOPLIST_FILE = BGRecursiveTableViewDataSource_Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.benguild.CocoaPods.BGRecursiveTableViewDataSource-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

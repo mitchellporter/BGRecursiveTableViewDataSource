@@ -17,6 +17,6 @@ s.requires_arc = true
 s.framework = 'UIKit'
 s.framework = 'CoreData'
 
-s.private_header_files = 'Example/BGRecursiveTableViewDataSource Tests/*.h'
+s.private_header_files = 'Example/BGRecursiveTableViewDataSource_Tests/*.h'
 
 end
