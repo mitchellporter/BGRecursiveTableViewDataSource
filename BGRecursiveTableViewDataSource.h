@@ -23,7 +23,7 @@
 - (void)beginUpdatesForSectionGroups:(NSSet <BGRecursiveTableViewDataSourceSectionGroup *>*)sectionGroups; // Use these internally instead of calling `UITableView` beginUpdates/endUpdates() methods.
 - (void)endUpdatesForSectionGroups:(NSSet <BGRecursiveTableViewDataSourceSectionGroup *>*)sectionGroups;
 
-- (NSOrderedSet *)sectionGroups;
+- (NSOrderedSet<BGRecursiveTableViewDataSourceSectionGroup *> *)sectionGroups;
 
 
 #pragma mark - Add/remove "section groups" after initialization

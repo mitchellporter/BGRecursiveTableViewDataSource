@@ -85,7 +85,7 @@
     
 }
 
-- (NSOrderedSet *)sectionGroups
+- (NSOrderedSet<BGRecursiveTableViewDataSourceSectionGroup *> *)sectionGroups
 {
     return [_sectionGroups copy];
     
