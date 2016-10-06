@@ -18,7 +18,9 @@
 - (NSIndexPath *)translateInternalIndexPathToTopLevel:(NSIndexPath *)indexPath; // NOTE: You shouldn't need this method unless you need to manually get the actual "indexPath" for the actual cell... such as to make changes to it directly if it already exists. (updates without reloading, etc.) — The convenience methods below are better suited for inserting/deleting/reloading cells and sections.
 - (NSIndexPath *)translateSubsectionIndexPathToTopLevel:(NSIndexPath *)indexPath forSubsection:(BGRecursiveTableViewDataSourceSectionGroup *)subsectionGroup; // NOTE: This method should probably only be called by inner `BGRecursiveTableViewDataSourceSectionGroup` subsections.
 
-- (NSSet *)sectionGroups;
+- (NSSet<BGRecursiveTableViewDataSourceSectionGroup *> *)sectionGroups;
+- (NSDictionary<NSNumber *, BGRecursiveTableViewDataSourceSectionGroup *> *)activeInnerSectionGroupsForNonSubsectionSectionIndex:(NSUInteger)sectionIndex;
+- (NSDictionary<NSNumber *, BGRecursiveTableViewDataSourceSectionGroup *> *)inactiveInnerSectionGroupsForNonSubsectionSectionIndex:(NSUInteger)sectionIndex;
 
 
 #pragma mark - Row + section insertion/deletion (Use these convenience methods instead of the UITableView's).

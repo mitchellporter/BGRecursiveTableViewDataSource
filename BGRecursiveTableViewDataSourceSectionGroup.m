@@ -98,9 +98,25 @@
     
 }
 
-- (NSSet *)sectionGroups
+- (NSSet<BGRecursiveTableViewDataSourceSectionGroup *> *)sectionGroups
 {
     return [_sectionGroups copy];
+    
+}
+
+- (NSDictionary<NSNumber *,BGRecursiveTableViewDataSourceSectionGroup *> *)activeInnerSectionGroupsForNonSubsectionSectionIndex:(NSUInteger)sectionIndex
+{
+    NSMutableDictionary<NSNumber *, BGRecursiveTableViewDataSourceSectionGroup *> *dictionary=[_activeInnerSectionGroups objectForKey:@(sectionIndex)];
+    
+    return (dictionary ? [dictionary copy] : nil);
+    
+}
+
+- (NSDictionary<NSNumber *,BGRecursiveTableViewDataSourceSectionGroup *> *)inactiveInnerSectionGroupsForNonSubsectionSectionIndex:(NSUInteger)sectionIndex
+{
+    NSMutableDictionary<NSNumber *, BGRecursiveTableViewDataSourceSectionGroup *> *dictionary=[_inactiveInnerSectionGroups objectForKey:@(sectionIndex)];
+    
+    return (dictionary ? [dictionary copy] : nil);
     
 }
 
