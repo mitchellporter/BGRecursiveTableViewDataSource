@@ -19,6 +19,13 @@
 
 @implementation BGRecursiveTableViewDataSourceFetchedResultsSectionGroup
 
+- (void)dealloc
+{
+    [_fetchedResultsController setDelegate:nil]; // Without this, it may still try to call methods on here even after removal.
+    _fetchedResultsController=nil;
+    
+}
+
 - (instancetype)initWithTableView:(UITableView *)tableView fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
     if (self=[super initWithTableView:tableView])
